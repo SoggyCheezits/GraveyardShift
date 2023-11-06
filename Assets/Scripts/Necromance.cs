@@ -26,6 +26,14 @@ public class Necromance : MonoBehaviour
     {
         if (canRevive)
         {
+            //New stuff Jason added
+            Corpse corpse = GetComponent<Corpse>();
+            if (corpse != null)
+            {
+                ally = corpse.summon;
+            }
+            //End of addition
+
             Instantiate(ally, transform.position, transform.rotation);
             foreach (GameObject highlight in UniMance.highlights)
             {
