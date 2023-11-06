@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   summon: {fileID: 1034393054368571731, guid: 6fa0a00764ac297428e162b639b7cc18, type: 3}
-  decayTime: 5
+  decayTime: 30
 --- !u!114 &3147502792509674530
 MonoBehaviour:
   m_ObjectHideFlags: 0
