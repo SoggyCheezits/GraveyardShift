@@ -6,7 +6,11 @@ using UnityEngine;
 
 public class DemonController : MonoBehaviour
 {
+    public GameObject fireball;
     public float fireRate;
+    public float fireDelay;
+    private bool initialInvoke = true;
+
     public GameObject[] currentEnemies;
     public float[] enemyYPos;
     public GameObject targetEnemy;
@@ -16,14 +20,24 @@ public class DemonController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        
+        fireDelay = fireRate;   
     }
 
     // Update is called once per frame
     void Update()
     {
+        currentEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         FindTargetEnemy();
+
+        if(targetEnemy != null && initialInvoke)
+        {
+            InvokeRepeating("ShootFireball", fireRate, fireDelay);
+            initialInvoke = false;
+        }
+        else if (targetEnemy == null)
+        {
+            initialInvoke = true;
+        }
     }
 
     public void FindTargetEnemy()
@@ -50,5 +64,10 @@ public class DemonController : MonoBehaviour
 
         direction = (targetEnemy.transform.position - transform.position).normalized;
         transform.up = direction;
+    }
+
+    public void ShootFireball()
+    {
+        Instantiate(fireball, transform.position, transform.rotation);
     }
 }

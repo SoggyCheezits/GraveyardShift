@@ -52,7 +52,7 @@ public abstract class Mob : MonoBehaviour
             advanceDirection = Vector2.up;
         }
 
-        transform.right = advanceDirection;
+        transform.up = advanceDirection;
     }
 
     public virtual void Die()
