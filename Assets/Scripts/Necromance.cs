@@ -41,6 +41,7 @@ public class Necromance : MonoBehaviour
             }
 
             Destroy(gameObject);
+            UniMance.DeactivateSpell();
         }
     }
 }

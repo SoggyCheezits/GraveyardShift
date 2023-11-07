@@ -27,34 +27,44 @@ public class UniManceSpell : MonoBehaviour
 
     private void OnMouseDown()
     {
-        #region ActivateSpell
-        if (!spellActive)
+        if (spellActive)
         {
-            foreach (GameObject corpse in corpses)
-            {
-                Instantiate(clickHighlight, corpse.transform.position, corpse.transform.rotation);
-                
-                necromance = corpse.GetComponent<Necromance>();
-                necromance.canRevive = true;
-            }
-            spellActive = true;
+            DeactivateSpell();
         }
-        #endregion
-        #region DeactivateSpell
-        else if (spellActive)
+        else if  (!spellActive)
         {
-            foreach (GameObject corpse in corpses)
-            {
-                necromance = corpse.GetComponent<Necromance>();
-                necromance.canRevive = false;
-            }
-
-            foreach (GameObject highlight in highlights)
-            {
-                Destroy(highlight);
-            }
-            spellActive = false;
+            ActivateSpell();
         }
-        #endregion
     }
+
+    #region ActivateSpell
+    public void ActivateSpell()
+    {
+        foreach (GameObject corpse in corpses)
+        {
+            Instantiate(clickHighlight, corpse.transform.position, corpse.transform.rotation);
+
+            necromance = corpse.GetComponent<Necromance>();
+            necromance.canRevive = true;
+        }
+        spellActive = true;
+    }
+    #endregion
+    #region DeactivateSpell
+    public void DeactivateSpell()
+    {
+        foreach (GameObject corpse in corpses)
+        {
+            necromance = corpse.GetComponent<Necromance>();
+            necromance.canRevive = false;
+        }
+
+        foreach (GameObject highlight in highlights)
+        {
+            Destroy(highlight);
+        }
+        spellActive = false;
+    }
+
+    #endregion
 }
