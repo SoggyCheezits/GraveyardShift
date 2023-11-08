@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class ManaManager : MonoBehaviour
 {
     public int mana;
     public GameObject[] indicators;
+    public bool canUseSpell;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +55,16 @@ public class ManaManager : MonoBehaviour
         if(mana >= manaCost)
         {
             mana -= manaCost;
+            canUseSpell = true;
         }
+        else if (mana < manaCost)
+        {
+            canUseSpell = false;
+        }
+    }
 
+    public void AddMana(int manaAdded)
+    {
+        mana += manaAdded;
     }
 }
