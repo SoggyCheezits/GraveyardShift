@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseFollow : MonoBehaviour
 {
-    private Vector2 directionFacing;
+    public Vector2 directionFacing;
     private Vector3 mousePos;
 
     // Start is called before the first frame update
@@ -18,6 +18,11 @@ public class MouseFollow : MonoBehaviour
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         directionFacing = (mousePos - transform.position).normalized;
+
+        if(directionFacing.y < 0)
+        {
+            directionFacing.y *= -1;
+        }
 
         transform.up = directionFacing;
     }
