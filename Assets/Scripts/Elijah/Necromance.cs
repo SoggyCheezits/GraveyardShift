@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Necromance : MonoBehaviour
 {
+    public ManaManager mana;
     public UniManceSpell UniMance;
 
     public bool canRevive;
@@ -13,6 +14,7 @@ public class Necromance : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mana = GameObject.Find("ManaManager").GetComponent<ManaManager>();
         UniMance = GameObject.Find("UniMance").GetComponent<UniManceSpell>();
     }
 
@@ -26,22 +28,25 @@ public class Necromance : MonoBehaviour
     {
         if (canRevive)
         {
-            //New stuff Jason added
-            Corpse corpse = GetComponent<Corpse>();
-            if (corpse != null)
-            {
-                ally = corpse.summon;
-            }
-            //End of addition
+            mana.UseSpell(1);
 
-            Instantiate(ally, transform.position, transform.rotation);
-            foreach (GameObject highlight in UniMance.highlights)
+            if (mana.canUseSpell)
             {
-                Destroy(highlight);
-            }
+                Corpse corpse = GetComponent<Corpse>();
+                if (corpse != null)
+                {
+                    ally = corpse.summon;
+                }
 
-            Destroy(gameObject);
-            UniMance.DeactivateSpell();
+                Instantiate(ally, transform.position, transform.rotation);
+                foreach (GameObject highlight in UniMance.highlights)
+                {
+                    Destroy(highlight);
+                }
+
+                Destroy(gameObject);
+                UniMance.DeactivateSpell();
+            }
         }
     }
 }
