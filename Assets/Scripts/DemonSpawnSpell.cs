@@ -18,8 +18,15 @@ public class DemonSpawnSpell : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rightSpawn.SetActive(spawnsActive);
-        leftSpawn.SetActive(spawnsActive);
+        if (rightSpawn != null)
+        {
+            rightSpawn.SetActive(spawnsActive);
+        }
+
+        if (leftSpawn != null)
+        {
+            leftSpawn.SetActive(spawnsActive);
+        }
     }
 
     private void OnMouseDown()

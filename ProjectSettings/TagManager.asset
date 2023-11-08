@@ -8,6 +8,7 @@ TagManager:
   - Corpse
   - Ally
   - Highlight
+  - Detector
   layers:
   - Default
   - TransparentFX
