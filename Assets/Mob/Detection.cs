@@ -42,11 +42,11 @@ public class Detection : MonoBehaviour
                     Debug.Log("Enemy Detected.");
                     if (gameObject.name.Equals("DetectionTrigger"))
                     {
-                        parent.EnemyDetected();
+                        parent.EnemyDetected(collision.gameObject);
                     }
                     else if (gameObject.name.Equals("AttackTrigger"))
                     {
-                        parent.EnemyInRange();
+                        parent.EnemyInRange(collision.gameObject);
                     }
                 }
 
