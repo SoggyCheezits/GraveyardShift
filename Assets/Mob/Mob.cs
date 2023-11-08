@@ -55,6 +55,15 @@ public abstract class Mob : MonoBehaviour
         }
     }
 
+    public virtual void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
     public virtual IEnumerator DealDamage()
     {
         isAttacking = true;
@@ -92,6 +101,10 @@ public abstract class Mob : MonoBehaviour
     {
         source.enemyInRange = false;
         source.target = null;
+        Destroy(gameObject);
+    }
+    public virtual void Die()
+    {
         Destroy(gameObject);
     }
 
