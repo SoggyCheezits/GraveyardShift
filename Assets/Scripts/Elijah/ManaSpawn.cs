@@ -2,19 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Knight : Mob
+public class ManaSpawn : MonoBehaviour
 {
+    public Knight knight;
     public ManaManager mana;
     public int chance = 5;
     public int randomNum;
 
-    public override void Die()
+    // Start is called before the first frame update
+    void Start()
     {
+        knight = GetComponent<Knight>();
         mana = GameObject.Find("ManaManager").GetComponent<ManaManager>();
-        RandomChance();
-        CheckChance();
+    }
 
-        base.Die();
+    // Update is called once per frame
+    void Update()
+    {
+        if(knight.health == 0)
+        {
+            RandomChance();
+            Debug.Log("Number: " + randomNum);
+        }
+
+
     }
 
     public int RandomChance()

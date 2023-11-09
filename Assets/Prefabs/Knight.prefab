@@ -303,6 +303,9 @@ MonoBehaviour:
   damage: 1
   attackDelay: 1
   target: {fileID: 0}
+  mana: {fileID: 0}
+  chance: 5
+  randomNum: 0
 --- !u!58 &5775240517062611429
 CircleCollider2D:
   m_ObjectHideFlags: 0
