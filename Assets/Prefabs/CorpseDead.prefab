@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6828132603666973647}
   - component: {fileID: 3147502792509674530}
   - component: {fileID: 2334255675742910531}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CorpseDead
   m_TagString: Corpse
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5113573176981336057
 SpriteRenderer:
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -310150189
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3c9f62a8bc93fdc488742684e04c8313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   summon: {fileID: 1034393054368571731, guid: 6fa0a00764ac297428e162b639b7cc18, type: 3}
-  decayTime: 30
+  decayTime: 5
 --- !u!114 &3147502792509674530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285dbe266ecf698409b4e80bcf2773fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mana: {fileID: 0}
   UniMance: {fileID: 0}
   canRevive: 0
   ally: {fileID: 0}
@@ -131,7 +132,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

@@ -23,6 +23,7 @@ public abstract class Mob : MonoBehaviour
     private bool enemyInRange = false;
 
     public GameObject target;
+    public GameObject corpsePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,7 @@ public abstract class Mob : MonoBehaviour
         health -= damage;
         if (health <= 0) 
         {
+            Instantiate(corpsePrefab, transform.position, corpsePrefab.transform.rotation);
             Die(source);
         }
     }
@@ -60,6 +62,7 @@ public abstract class Mob : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            Instantiate(corpsePrefab, transform.position, corpsePrefab.transform.rotation);
             Die();
         }
     }

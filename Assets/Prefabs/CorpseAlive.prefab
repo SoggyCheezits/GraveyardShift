@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1484705049202687181}
   - component: {fileID: 5045780800242379152}
   - component: {fileID: 5954153816156470179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CorpseAlive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 4328668174703097729}
   - {fileID: 5816548319096170907}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8280827480479628479
 SpriteRenderer:
@@ -101,12 +101,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee59983b6795ced4c981da5cf47535ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 4
   health: 0
-  speed: 1
-  detectionRadius: 0.7
+  speed: 0.5
+  detectionRadius: 2.5
   attackRadius: 0.5
   isEnemy: 0
+  damage: 1
+  attackDelay: 2
+  target: {fileID: 0}
+  corpsePrefab: {fileID: 2852787371958257468, guid: efad3a21e18b86a42b1806b19e3ee7b2, type: 3}
 --- !u!50 &5045780800242379152
 Rigidbody2D:
   serializedVersion: 4
@@ -180,9 +184,9 @@ GameObject:
   - component: {fileID: 4328668174703097729}
   - component: {fileID: 2802617197435698335}
   - component: {fileID: 2031275984442824441}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DetectionTrigger
-  m_TagString: Untagged
+  m_TagString: Detector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,7 +250,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -263,9 +267,9 @@ GameObject:
   - component: {fileID: 5816548319096170907}
   - component: {fileID: 6380688057960076691}
   - component: {fileID: 5894968205645432181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackTrigger
-  m_TagString: Untagged
+  m_TagString: Detector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -329,7 +333,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

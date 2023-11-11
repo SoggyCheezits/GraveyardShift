@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3478719987022838810}
   - component: {fileID: 8106959761421432740}
   - component: {fileID: 6037680833047919427}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DetectionTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 884751698019607744}
   - component: {fileID: 1125206752077513551}
   - component: {fileID: 4329997392755087906}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 8134491823260095321}
   - component: {fileID: 8239717578419943054}
   - component: {fileID: 5775240517062611429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Knight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -297,14 +297,15 @@ MonoBehaviour:
   maxHealth: 3
   health: 0
   speed: 0.5
-  detectionRadius: 2
+  detectionRadius: 2.5
   attackRadius: 1.2
   isEnemy: 1
   damage: 1
   attackDelay: 1
   target: {fileID: 0}
+  corpsePrefab: {fileID: 308146516430305394, guid: 13d350ce2f909a241933cc42fb485c57, type: 3}
   mana: {fileID: 0}
-  chance: 5
+  chance: 2
   randomNum: 0
 --- !u!58 &5775240517062611429
 CircleCollider2D:
