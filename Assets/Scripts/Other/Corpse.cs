@@ -10,6 +10,7 @@ public class Corpse : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.Translate(Vector3.back * 1);
         StartCoroutine(Decay()); 
     }
 

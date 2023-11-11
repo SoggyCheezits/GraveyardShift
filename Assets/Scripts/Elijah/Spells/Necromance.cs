@@ -11,6 +11,8 @@ public class Necromance : MonoBehaviour
     public bool canRevive;
     public GameObject ally;
 
+    public float spawnHeight = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +40,9 @@ public class Necromance : MonoBehaviour
                     ally = corpse.summon;
                 }
 
-                Instantiate(ally, transform.position, transform.rotation);
+                Instantiate(ally,
+                    new Vector3(transform.position.x, transform.position.y, spawnHeight),
+                    transform.rotation);
                 foreach (GameObject highlight in UniMance.highlights)
                 {
                     Destroy(highlight);
