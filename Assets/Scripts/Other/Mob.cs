@@ -16,6 +16,8 @@ public abstract class Mob : MonoBehaviour
     private bool isAttacking = false;
     public float damage;
     public float attackDelay;
+    public Sprite attackSprite;
+    public SpriteRenderer attackDisplay;
 
 
     private Vector2 advanceDirection;
@@ -72,7 +74,9 @@ public abstract class Mob : MonoBehaviour
         isAttacking = true;
         while(enemyInRange)
         {
-            target.GetComponent<Mob>().TakeDamage(damage, gameObject.GetComponent<Mob>());
+            Mob mob = target.GetComponent<Mob>();
+            mob.TakeDamage(damage, gameObject.GetComponent<Mob>());
+            mob.GetComponentInChildren<AttackDisplay>().UpdateSprite(attackSprite);
             yield return new WaitForSeconds(attackDelay);
         }
         isAttacking=false;
