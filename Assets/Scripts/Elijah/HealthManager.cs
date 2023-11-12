@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(health <= 0)
+        {
+            GameOver();
+        }
+
         ChangeIndicators();
     }
 
@@ -40,5 +46,13 @@ public class HealthManager : MonoBehaviour
         {
             healthIndicators[i].SetActive(true);
         }
+    }
+
+    public void GameOver()
+    {
+        //Play Death Animation
+
+        //Bring to GameOverScreen
+        SceneManager.LoadScene("GameOverScreen");
     }
 }
