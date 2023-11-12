@@ -28,13 +28,13 @@ public abstract class Mob : MonoBehaviour
     public GameObject corpsePrefab;
 
     // Start is called before the first frame update
-    void Start()
+   protected virtual void Start()
     {
         Initialize();
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if (enemyInRange)
         {
@@ -76,7 +76,14 @@ public abstract class Mob : MonoBehaviour
         {
             Mob mob = target.GetComponent<Mob>();
             mob.TakeDamage(damage, gameObject.GetComponent<Mob>());
-            mob.GetComponentInChildren<AttackDisplay>().UpdateSprite(attackSprite);
+            AttackDisplay ad = mob.GetComponentInChildren<AttackDisplay>();
+
+            if(ad != null)
+            {
+                ad.UpdateSprite(attackSprite);
+            }
+                
+               
             yield return new WaitForSeconds(attackDelay);
         }
         isAttacking=false;

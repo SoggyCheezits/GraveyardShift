@@ -8,6 +8,24 @@ public class Knight : Mob
     public int chance = 5;
     public int randomNum;
 
+    public GameObject tower;
+
+    protected override void Start()
+    {
+        base.Start();
+        tower = GameObject.Find("Tower");
+    }
+
+    protected override void Update()
+    {
+        if (target == null)
+        {
+            target = tower;
+        }
+
+        base.Update();
+    }
+
     public override void Die()
     {
         mana = GameObject.Find("ManaManager").GetComponent<ManaManager>();
