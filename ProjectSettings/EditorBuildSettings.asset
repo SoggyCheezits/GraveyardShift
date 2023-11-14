@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MobToCorpse.unity
     guid: 4c5ef19846820784db36db19ae628db5
+  - enabled: 1
+    path: Assets/Scenes/GameOverScreen.unity
+    guid: c31fa9a7490c00b4581c0894cdfc7e96
   m_configObjects: {}
