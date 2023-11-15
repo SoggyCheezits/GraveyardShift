@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlaceTotem : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
-
+    public SkullTotem totemSpell;
     public GameObject totem;
 
     public Vector3 mousePos;
@@ -17,6 +17,7 @@ public class PlaceTotem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        totemSpell = GameObject.Find("CreateTotem").GetComponent<SkullTotem>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -71,6 +72,7 @@ public class PlaceTotem : MonoBehaviour
         if (canPlace)
         {
             Instantiate(totem, transform.position, transform.rotation);
+            totemSpell.spellActive = false;
         }
     }
 }

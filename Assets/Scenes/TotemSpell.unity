@@ -1960,6 +1960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaceOutline
       objectReference: {fileID: 0}
+    - target: {fileID: 1909417852448979818, guid: 477006b8649533b4b88a10fc6d94f486, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3836465434603037917, guid: 477006b8649533b4b88a10fc6d94f486, type: 3}
       propertyPath: m_RootOrder
       value: 14
