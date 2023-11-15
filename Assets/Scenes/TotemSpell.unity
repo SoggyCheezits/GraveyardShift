@@ -2049,6 +2049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  totemSpell: {fileID: 0}
   totem: {fileID: 351226978099316007, guid: f36561db8dbfa7f4195fb42dbf660916, type: 3}
   mousePos: {x: 0, y: 0, z: 0}
   yRange: -2
@@ -3519,12 +3520,20 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2348004988135989344, guid: 62b05e6a677672d488485b6b4d3d8d3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.64296156
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348004988135989344, guid: 62b05e6a677672d488485b6b4d3d8d3c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.486634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348004988135989344, guid: 62b05e6a677672d488485b6b4d3d8d3c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0413
+      value: 1.2049
       objectReference: {fileID: 0}
     - target: {fileID: 2348004988135989344, guid: 62b05e6a677672d488485b6b4d3d8d3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.9047
+      value: 1.6232
       objectReference: {fileID: 0}
     - target: {fileID: 2348004988135989344, guid: 62b05e6a677672d488485b6b4d3d8d3c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3564,7 +3573,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832588108191154022, guid: 62b05e6a677672d488485b6b4d3d8d3c, type: 3}
       propertyPath: m_Size.y
-      value: 31.93634
+      value: 28.726942
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832588108191154022, guid: 62b05e6a677672d488485b6b4d3d8d3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f200e7c028c343246a242fa764db3fc6, type: 3}
+    - target: {fileID: 4832588108191154022, guid: 62b05e6a677672d488485b6b4d3d8d3c, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
