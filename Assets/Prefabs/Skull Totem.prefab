@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 1433725810127722015}
   - component: {fileID: 4800562101612132657}
   - component: {fileID: 6575172530598183543}
+  - component: {fileID: 8857892343272267496}
   m_Layer: 0
   m_Name: Defense Radius
   m_TagString: Untagged
@@ -5062,3 +5063,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &8857892343272267496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2753993050716372241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1170c74d55e657248b62b4d54aa583c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forcePower: 2
+  enemyRb: {fileID: 0}
+  pushDirection: {x: 0, y: 0}

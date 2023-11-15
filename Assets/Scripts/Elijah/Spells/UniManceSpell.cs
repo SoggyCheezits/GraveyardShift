@@ -42,7 +42,7 @@ public class UniManceSpell : MonoBehaviour
     {
         foreach (GameObject corpse in corpses)
         {
-            Instantiate(clickHighlight, corpse.transform.position, corpse.transform.rotation);
+            Instantiate(clickHighlight, corpse.transform.position, corpse.transform.rotation).transform.parent = corpse.transform;
 
             necromance = corpse.GetComponent<Necromance>();
             necromance.canRevive = true;
