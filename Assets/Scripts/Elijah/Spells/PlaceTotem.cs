@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlaceTotem : MonoBehaviour
 {
+    public ManaManager mana;
+
     public SpriteRenderer spriteRenderer;
     public SkullTotem totemSpell;
     public GameObject totem;
@@ -17,6 +19,7 @@ public class PlaceTotem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mana = GameObject.Find("ManaManager").GetComponent<ManaManager>();
         totemSpell = GameObject.Find("CreateTotem").GetComponent<SkullTotem>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -37,6 +40,7 @@ public class PlaceTotem : MonoBehaviour
         {
             spriteRenderer.color = Color.red;
         }
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -56,7 +60,7 @@ public class PlaceTotem : MonoBehaviour
 
     void CheckCanPlace()
     {
-        if (transform.position.y >= yRange && emptyCollisions)
+        if (transform.position.y >= yRange && emptyCollisions && mana.mana >= 2)
         {
             canPlace = true;
         }
@@ -71,8 +75,12 @@ public class PlaceTotem : MonoBehaviour
     {
         if (canPlace)
         {
-            Instantiate(totem, transform.position, transform.rotation);
-            totemSpell.spellActive = false;
+            mana.UseSpell(2);
+            if (mana.canUseSpell)
+            {
+                Instantiate(totem, transform.position, transform.rotation);
+                totemSpell.spellActive = false;
+            }
         }
     }
 }
