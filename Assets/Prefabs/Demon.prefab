@@ -97,12 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b5b1ccfa70a204fa4b02f126deb0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireball: {fileID: 1929432442590177000, guid: 74432b0aae3ae02459ba6cadf94d9342, type: 3}
+  fireball: {fileID: 1214096301742250483, guid: bd1c22e7991c18d44bad5d086cb1fb04, type: 3}
   fireRate: 1
   fireDelay: 0
   currentEnemies: []
   enemyYPos: []
   targetEnemy: {fileID: 0}
   direction: {x: 0, y: 0}
-  audio: {fileID: 0}
-  fire: {fileID: 0}
