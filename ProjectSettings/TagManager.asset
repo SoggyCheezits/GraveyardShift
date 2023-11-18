@@ -9,6 +9,7 @@ TagManager:
   - Ally
   - Highlight
   - Detector
+  - Outline
   layers:
   - Default
   - TransparentFX

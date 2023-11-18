@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MostRecent/TitleScreen.unity
     guid: f75d7e9ff96833148ba9e4e6bdbbd498
   - enabled: 1
-    path: Assets/Scenes/MostRecent/11-17-2023.unity
+    path: Assets/Scenes/11-17-2023.unity
     guid: cb30dc39cf3c98b47a77725e6da5c66b
   - enabled: 1
     path: Assets/Scenes/MostRecent/GameOverScreen.unity
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MobToCorpse.unity
     guid: 4c5ef19846820784db36db19ae628db5
+  - enabled: 1
+    path: Assets/Scenes/MostRecent/FineTuning2.unity
+    guid: 252f192737d78bd4a91e8b75220e7ed9
   m_configObjects: {}
