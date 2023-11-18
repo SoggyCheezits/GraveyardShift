@@ -29,5 +29,9 @@ public class TotemShield : MonoBehaviour
 
             enemyRb.AddForce(pushDirection * forcePower, ForceMode2D.Impulse);
         }
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

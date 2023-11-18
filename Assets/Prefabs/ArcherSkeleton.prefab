@@ -364,7 +364,7 @@ MonoBehaviour:
   chance: 1
   randomNum: 0
   tower: {fileID: 0}
-  projectile: {fileID: 390065115990974802, guid: d9154fd0933c2eb4e8be1f607f27cdff, type: 3}
+  projectile: {fileID: 390065115990974802, guid: 37dcf95e751bf0145860dfdd05d4cdbe, type: 3}
   projectileSpawn: {fileID: 5139102774637219629}
 --- !u!1 &5861510172340900839
 GameObject:
