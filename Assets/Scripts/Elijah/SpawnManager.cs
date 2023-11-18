@@ -5,7 +5,12 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] spawnPoints;
+
     public GameObject enemy;
+    public GameObject silverKnight;
+    public GameObject archer;
+    public GameObject goldKnight;
+
     public bool canSpawn;
     public float spawnDelay = 0.5f;
 
@@ -18,7 +23,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -44,11 +49,31 @@ public class SpawnManager : MonoBehaviour
         canSpawn = false;
         for (int i = 0; i < enemyNum; i++)
         {
+            ChooseEnemy();
             GameObject randomSpawn = spawnPoints[Random.Range(0, spawnPoints.Length)];
             Instantiate(enemy, randomSpawn.transform.position, randomSpawn.transform.rotation);
 
             yield return new WaitForSeconds(seconds);
         }
         
+    }
+
+    public void ChooseEnemy()
+    {
+        float chance = Random.Range(1, 101);
+        Debug.Log("chanceNum: " + chance);
+
+        if (chance <= 50)
+        {
+            enemy = silverKnight;
+        }
+        else if (chance <= 90 && chance > 50)
+        {
+            enemy = archer;
+        }
+        else if (chance <= 100 && chance > 90)
+        {
+            enemy = goldKnight;
+        }
     }
 }

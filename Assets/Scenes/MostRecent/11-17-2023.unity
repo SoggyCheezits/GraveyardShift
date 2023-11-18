@@ -866,9 +866,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3980874429337312151, guid: e3dba6d1f5e36f348b68d685f87f41e3, type: 3}
+      propertyPath: m_FlipY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980874429337312151, guid: e3dba6d1f5e36f348b68d685f87f41e3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f21815d44a308ef4bb3f58230ef46ecd, type: 3}
+      objectReference: {fileID: 21300000, guid: 356488ae02c847e40b0d6bafb55663ba, type: 3}
     - target: {fileID: 3980874429337312151, guid: e3dba6d1f5e36f348b68d685f87f41e3, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -2334,9 +2338,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3980874429337312151, guid: e3dba6d1f5e36f348b68d685f87f41e3, type: 3}
+      propertyPath: m_FlipY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980874429337312151, guid: e3dba6d1f5e36f348b68d685f87f41e3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f21815d44a308ef4bb3f58230ef46ecd, type: 3}
+      objectReference: {fileID: 21300000, guid: 356488ae02c847e40b0d6bafb55663ba, type: 3}
     - target: {fileID: 3980874429337312151, guid: e3dba6d1f5e36f348b68d685f87f41e3, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -3065,7 +3073,10 @@ MonoBehaviour:
   - {fileID: 761240029}
   - {fileID: 1650668904}
   - {fileID: 1959853687}
-  enemy: {fileID: 5824913258582620419, guid: 49b3d1246bf8a4d42932679d38616305, type: 3}
+  enemy: {fileID: 0}
+  silverKnight: {fileID: 5824913258582620419, guid: 49b3d1246bf8a4d42932679d38616305, type: 3}
+  archer: {fileID: 7029267088740234617, guid: a51a0db801e59374ab0f09041a8d3bea, type: 3}
+  goldKnight: {fileID: 2142828348023350214, guid: af90447e4a6d6624296f523c45101bd0, type: 3}
   canSpawn: 1
   spawnDelay: 0.5
   currentEnemies: []
