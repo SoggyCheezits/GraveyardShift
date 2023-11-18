@@ -13,16 +13,16 @@ public abstract class Mob : MonoBehaviour
     public bool isEnemy;
 
     [Header("Attack")]
-    private bool isAttacking = false;
+    protected bool isAttacking = false;
     public float damage;
     public float attackDelay;
     public Sprite attackSprite;
     public SpriteRenderer attackDisplay;
 
 
-    private Vector2 advanceDirection;
-    private bool detectsEnemy = false;
-    private bool enemyInRange = false;
+    protected Vector2 advanceDirection;
+    protected bool detectsEnemy = false;
+    protected bool enemyInRange = false;
 
     public GameObject target;
     public GameObject corpsePrefab;
@@ -36,6 +36,12 @@ public abstract class Mob : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
+        if(target == null)
+        {
+            enemyInRange = false;
+            isAttacking = false;
+        }
+
         if (enemyInRange)
         {
             if (!isAttacking)
