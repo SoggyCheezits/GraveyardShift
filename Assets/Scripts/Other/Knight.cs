@@ -5,7 +5,7 @@ using UnityEngine;
 public class Knight : Mob
 {
     public ManaManager mana;
-    public int chance = 5;
+    public int chance = 2;
     public int randomNum;
 
     public GameObject tower;
