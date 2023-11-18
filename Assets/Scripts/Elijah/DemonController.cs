@@ -17,7 +17,7 @@ public class DemonController : MonoBehaviour
     public Vector2 direction;
 
     public float range;
-    public float duration;
+    //public float duration;
 
     public GameObject spawnPoint;
 
@@ -26,7 +26,7 @@ public class DemonController : MonoBehaviour
     void Start()
     {
 
-        StartCoroutine(DelayedDestroy());
+        //StartCoroutine(DelayedDestroy());
 
         fireDelay = fireRate;   
     }
@@ -82,10 +82,10 @@ public class DemonController : MonoBehaviour
         }
     }
 
-    IEnumerator DelayedDestroy()
+    /*IEnumerator DelayedDestroy()
     {
         yield return new WaitForSeconds(duration);
         spawnPoint.SetActive(true);
         Destroy(gameObject);
-    }
+    }*/
 }

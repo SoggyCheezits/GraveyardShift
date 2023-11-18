@@ -10,6 +10,7 @@ TagManager:
   - Highlight
   - Detector
   - Outline
+  - Projectile
   layers:
   - Default
   - TransparentFX

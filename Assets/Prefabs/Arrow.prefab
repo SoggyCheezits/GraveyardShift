@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8254066966515957368}
   m_Layer: 0
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  source: {fileID: 0}
 --- !u!1 &7399595435057179878
 GameObject:
   m_ObjectHideFlags: 0
