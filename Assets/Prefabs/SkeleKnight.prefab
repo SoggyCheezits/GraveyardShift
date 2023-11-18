@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5045780800242379152}
   - component: {fileID: 5954153816156470179}
   m_Layer: 6
-  m_Name: CorpseAlive
-  m_TagString: Untagged
+  m_Name: SkeleKnight
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
