@@ -29,6 +29,10 @@ public class ArrowMove : MonoBehaviour
                 {
                     Destroy(gameObject);
                 }
+                else if(target.name.Equals("Tower"))
+                {
+                    target.TakeDamage(source.damage, source);
+                }
                 else
                 {
                     target.TakeDamage(source.damage);

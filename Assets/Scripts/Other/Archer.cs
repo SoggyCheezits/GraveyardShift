@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Archer : Mob
+public class Archer : Knight
 {
     public GameObject projectile;
     public Transform projectileSpawn;

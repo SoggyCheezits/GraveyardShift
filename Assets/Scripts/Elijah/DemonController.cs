@@ -16,10 +16,18 @@ public class DemonController : MonoBehaviour
     public GameObject targetEnemy;
     public Vector2 direction;
 
+    public float range;
+    public float duration;
+
+    public GameObject spawnPoint;
+
 
     // Start is called before the first frame update
     void Start()
     {
+
+        StartCoroutine(DelayedDestroy());
+
         fireDelay = fireRate;   
     }
 
@@ -68,6 +76,16 @@ public class DemonController : MonoBehaviour
 
     public void ShootFireball()
     {
-        Instantiate(fireball, transform.position, transform.rotation);
+        if ((targetEnemy.transform.position - transform.position).magnitude <= range)
+        {
+            Instantiate(fireball, transform.position, transform.rotation);
+        }
+    }
+
+    IEnumerator DelayedDestroy()
+    {
+        yield return new WaitForSeconds(duration);
+        spawnPoint.SetActive(true);
+        Destroy(gameObject);
     }
 }

@@ -18,7 +18,7 @@ public class Knight : Mob
 
     protected override void Update()
     {
-        if (target == null)
+        if (target == null  && isEnemy)
         {
             target = tower;
         }
@@ -42,7 +42,7 @@ public class Knight : Mob
     }
     public void CheckChance()
     {
-        if (RandomChance() == 1)
+        if (RandomChance() == 0)
         {
             mana.AddMana(1);
         }
