@@ -104,3 +104,5 @@ MonoBehaviour:
   enemyYPos: []
   targetEnemy: {fileID: 0}
   direction: {x: 0, y: 0}
+  range: 9
+  duration: 10

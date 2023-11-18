@@ -5,7 +5,7 @@ using UnityEngine;
 public class Knight : Mob
 {
     public ManaManager mana;
-    public int chance = 5;
+    public int chance = 2;
     public int randomNum;
 
     public GameObject tower;
@@ -18,7 +18,7 @@ public class Knight : Mob
 
     protected override void Update()
     {
-        if (target == null)
+        if (target == null  && isEnemy)
         {
             target = tower;
         }
@@ -42,7 +42,7 @@ public class Knight : Mob
     }
     public void CheckChance()
     {
-        if (RandomChance() == 1)
+        if (RandomChance() == 0)
         {
             mana.AddMana(1);
         }

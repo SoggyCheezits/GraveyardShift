@@ -30,8 +30,9 @@ public class SpawnDemon : MonoBehaviour
 
         if (mana.canUseSpell)
         {
-            Instantiate(demon, transform.position, transform.rotation);
-            Destroy(gameObject);
+            GameObject newDemon = Instantiate(demon, transform.position, transform.rotation);
+            newDemon.GetComponent<DemonController>().spawnPoint = this.gameObject;
+            gameObject.SetActive(false);
             demonSpawnSpell.spawnsActive = false;
         }
     }
