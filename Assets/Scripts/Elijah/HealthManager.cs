@@ -52,6 +52,11 @@ public class HealthManager : MonoBehaviour
     {
         //Play Death Animation
 
+
+        //SetHighScore
+
+        GameObject.Find("ScoreManager").GetComponent<ScoreManager>().HighScore();
+
         //Bring to GameOverScreen
         SceneManager.LoadScene("GameOverScreen");
     }
