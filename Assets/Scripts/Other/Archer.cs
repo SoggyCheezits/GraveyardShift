@@ -17,6 +17,7 @@ public class Archer : Knight
             transform.up = aimDirection;
             ArrowMove arrow = Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation).GetComponent<ArrowMove>();
             arrow.source = this;
+            audioSource.PlayOneShot(attackSound);
 
 
          

@@ -16,6 +16,9 @@ public class DemonController : MonoBehaviour
     public GameObject targetEnemy;
     public Vector2 direction;
 
+    public AudioSource audioSource;
+    public AudioClip attackSound;
+
     public float range;
     //public float duration;
 
@@ -27,7 +30,7 @@ public class DemonController : MonoBehaviour
     {
 
         //StartCoroutine(DelayedDestroy());
-
+        audioSource = GetComponent<AudioSource>();  
         fireDelay = fireRate;   
     }
 
@@ -78,6 +81,7 @@ public class DemonController : MonoBehaviour
     {
         if ((targetEnemy.transform.position - transform.position).magnitude <= range)
         {
+            audioSource.PlayOneShot(attackSound);
             Instantiate(fireball, transform.position, transform.rotation);
         }
     }

@@ -13,11 +13,15 @@ public class Necromance : MonoBehaviour
 
     public float spawnHeight = 0;
 
+    public AudioSource audioSource;
+    public AudioClip soundeffect;
+
     // Start is called before the first frame update
     void Start()
     {
         mana = GameObject.Find("ManaManager").GetComponent<ManaManager>();
         UniMance = GameObject.Find("UniMance").GetComponent<UniManceSpell>();
+        audioSource = GameObject.Find("SFX").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,6 +47,9 @@ public class Necromance : MonoBehaviour
                 Instantiate(ally,
                     new Vector3(transform.position.x, transform.position.y, spawnHeight),
                     transform.rotation);
+
+                audioSource.PlayOneShot(soundeffect);
+
                 foreach (GameObject highlight in UniMance.highlights)
                 {
                     Destroy(highlight);

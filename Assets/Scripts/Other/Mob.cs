@@ -4,6 +4,10 @@ using UnityEngine;
 
 public abstract class Mob : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip attackSound;
+
     [Header("Base Stats")]
     public float maxHealth;
     public float health;
@@ -89,7 +93,11 @@ public abstract class Mob : MonoBehaviour
                 ad.UpdateSprite(attackSprite);
             }
                 
-               
+            if(attackSound!=null)
+            {
+                audioSource.PlayOneShot(attackSound);
+            }
+            
             yield return new WaitForSeconds(attackDelay);
         }
         isAttacking=false;
@@ -99,6 +107,7 @@ public abstract class Mob : MonoBehaviour
 
     public virtual void Initialize()
     {
+        audioSource = GetComponent<AudioSource>();
         health = maxHealth;
         ResetDirection();
        
