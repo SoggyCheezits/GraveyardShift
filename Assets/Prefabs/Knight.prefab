@@ -410,6 +410,8 @@ MonoBehaviour:
   attackDisplay: {fileID: 0}
   target: {fileID: 0}
   corpsePrefab: {fileID: 308146516430305394, guid: 13d350ce2f909a241933cc42fb485c57, type: 3}
+  scoreManager: {fileID: 0}
+  pointValue: 2
   mana: {fileID: 0}
   chance: 2
   randomNum: 0

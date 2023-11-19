@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90c95663de37f649887a0a4f89a48a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  attackSound: {fileID: 0}
   maxHealth: 10
   health: 0
   speed: 0.25
@@ -59,6 +61,8 @@ MonoBehaviour:
   attackDisplay: {fileID: 0}
   target: {fileID: 0}
   corpsePrefab: {fileID: 308146516430305394, guid: 13d350ce2f909a241933cc42fb485c57, type: 3}
+  scoreManager: {fileID: 0}
+  pointValue: 5
   mana: {fileID: 0}
   chance: 2
   randomNum: 0

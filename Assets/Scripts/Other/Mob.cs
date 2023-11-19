@@ -31,6 +31,10 @@ public abstract class Mob : MonoBehaviour
     public GameObject target;
     public GameObject corpsePrefab;
 
+    [Header("Score")]
+    public ScoreManager scoreManager;
+    public int pointValue;
+
     // Start is called before the first frame update
    protected virtual void Start()
     {
@@ -107,6 +111,7 @@ public abstract class Mob : MonoBehaviour
 
     public virtual void Initialize()
     {
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         audioSource = GetComponent<AudioSource>();
         health = maxHealth;
         ResetDirection();
@@ -130,10 +135,21 @@ public abstract class Mob : MonoBehaviour
     {
         source.enemyInRange = false;
         source.target = null;
+
+        if(isEnemy)
+        {
+            scoreManager.AddScore(pointValue);
+        }
         Destroy(gameObject);
     }
     public virtual void Die()
     {
+
+        if (isEnemy)
+        {
+            scoreManager.AddScore(pointValue);
+        }
+
         Destroy(gameObject);
     }
 
