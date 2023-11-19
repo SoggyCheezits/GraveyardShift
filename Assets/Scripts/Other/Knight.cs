@@ -18,7 +18,11 @@ public class Knight : Mob
 
     protected override void Update()
     {
-        if (target == null  && isEnemy)
+        if (
+            target == null  
+            && isEnemy
+            && ((tower.transform.position - transform.position).magnitude <= attackRadius)
+            )
         {
             target = tower;
         }
